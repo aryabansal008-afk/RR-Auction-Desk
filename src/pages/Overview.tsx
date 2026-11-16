@@ -12,11 +12,11 @@ export function Overview() {
       <PageHeader
         eyebrow="Executive overview"
         title="Pressure, then reliability."
-        lede="This desk reads the validated IPL and T20I indexes. It does not rank players by runs, average, wickets, or economy, and it does not treat the 2026 squad page as a 2027 retention list."
+        lede="This desk reads the validated IPL and T20I indexes."
       />
       <div className="grid gap-4 md:grid-cols-4">
         <Stat label="Analysis balls" value={int(meta.analysisBalls)} hint="Primary innings with a trusted schedule." />
-        <Stat label="Pressure balls" value={int(meta.pressureBalls)} hint="Clauses A, B, or C. Death overs are not the definition." />
+        <Stat label="Pressure balls" value={int(meta.pressureBalls)} hint="Clauses A, B or C. Death overs are not the definition." />
         <Stat
           label="Eligible IPL"
           value={`${meta.batterEligible.IPL} / ${meta.bowlerEligible.IPL}`}
