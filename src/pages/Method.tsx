@@ -17,7 +17,7 @@ export function Method() {
         <Card>
           <h2 className="text-lg">Dataset</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Ball-by-ball, matches, playing elevens, squad mappings, competitions, and teams were delivered with the pack.
+            Ball-by-ball, matches, playing elevens, squad mappings, competitions and teams were delivered with the pack.
             Stage 2 cleaned them without editing the raw files. The analysis set is {meta.analysisBalls.toLocaleString("en-US")}{" "}
             trusted primary balls, of which {meta.pressureBalls.toLocaleString("en-US")} are pressure balls. Emerging-team
             matches stay off the headline boards.
@@ -29,13 +29,13 @@ export function Method() {
             <li>Clause A: innings 2, at least 12 balls left, required rate at least 10, at least 3 wickets down.</li>
             <li>Clause B: innings 2, fewer than 24 balls left, required rate at least 8, runs still needed.</li>
             <li>Clause C: last five scheduled overs and at least 7 wickets down.</li>
-            <li>Death overs, a low total, and the final margin are not the flag. State is taken at the start of the ball.</li>
+            <li>Death overs, a low total and the final margin are not the flag. State is taken at the start of the ball.</li>
           </ul>
         </Card>
         <Card>
           <h2 className="text-lg">Pressure Performance Index</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Expected runs come from format, phase, bowling or batting type, and the opponent win-rate band. The raw gap is
+            Expected runs come from format, phase, bowling or batting type and the opponent win-rate band. The raw gap is
             how far the player beat that expectation under pressure, minus the same residual in their other balls. Bowling
             gaps flip the sign, so fewer runs conceded is positive. The gap shrinks toward zero. PPI = 50 + 50 × tanh(shrunk
             gap / scale). Batting scale is {meta.constants.bat_scale} strike-rate points. Bowling scale is{" "}
@@ -96,7 +96,7 @@ export function Method() {
           <li>The win-probability bins are an in-sample proxy. They are not inside the index.</li>
           <li>There is no 2027 retention list, purse balance, or auction price in the sources used here.</li>
           <li>Powerplay and middle economy were not stored on the bowler index. Those phase rates are not invented on this screen.</li>
-          <li>A player’s standard deviation is one reliability input, through the match-spread component, and not the whole score.</li>
+          <li>A player’s standard deviation is one reliability input, through the match-spread component and not the whole score.</li>
         </ul>
       </Card>
 
