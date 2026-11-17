@@ -31,10 +31,10 @@ The dashboard helps analysts:
 
 - Explore eligible IPL and T20I batting and bowling records.
 - Compare pressure performance with a player's own baseline.
-- Inspect the Pressure Performance Index (PPI), reliability score, sample size, and bootstrap interval together.
+- Inspect the Pressure Performance Index (PPI), reliability score, sample size and bootstrap interval together.
 - Identify players whose pressure results are supported by repeatable evidence versus players whose estimates are still uncertain.
-- Review the auction shortlist, watchlist, role requirements, and conditional auction scenarios.
-- Understand the methodology, validation checks, data coverage, and source limitations behind each recommendation.
+- Review the auction shortlist, watchlist, role requirements and conditional auction scenarios.
+- Understand the methodology, validation checks, data coverage and source limitations behind each recommendation.
 
 The frontend **does not calculate the underlying player indexes**. It reads a precomputed JSON bundle exported by the analysis pipeline and presents those results.
 
@@ -43,15 +43,15 @@ The frontend **does not calculate the underlying player indexes**. It reads a pr
 | Route | Section | Purpose |
 |---|---|---|
 | `/` | Overview | Executive summary, leading targets, discoveries, squad requirements, and dataset coverage. |
-| `/explorer` | Explorer | Search and filter player records; open an individual player report. |
+| `/explorer` | Explorer | Search and filter player records, open an individual player report. |
 | `/pressure` | Pressure | Examine the distribution of pressure indexes and reliability, including interval-based views. |
 | `/compare` | Compare | Compare players within the same role and format using pressure, reliability, and sample-size measures. |
-| `/war-room` | War room | Review auction priorities, role-based scenarios, batting-order sensitivity, watchlist, and 2026 squad directory. |
-| `/reports` | Reports | Browse player scouting reports and their evidence, strengths, limitations, and Royals fit. |
-| `/reports/:group/:role/:id` | Player report | Inspect an individual player's record, pressure metrics, reliability, interval, and auction note. |
-| `/method` | Method | Read the metric definitions, pressure clauses, validation results, sources, and known limitations. |
+| `/war-room` | War room | Review auction priorities, role-based scenarios, batting-order sensitivity, watchlist and 2026 squad directory. |
+| `/reports` | Reports | Browse player scouting reports and their evidence, strengths, limitations and Royals fit. |
+| `/reports/:group/:role/:id` | Player report | Inspect an individual player's record, pressure metrics, reliability, interval and auction note. |
+| `/method` | Method | Read the metric definitions, pressure clauses, validation results, sources and known limitations. |
 
-All sections use the same loaded data bundle so that the overview, explorer, comparison tools, and reports remain consistent with one another.
+All sections use the same loaded data bundle so that the overview, explorer, comparison tools and reports remain consistent with one another.
 
 ## How the analysis works
 
@@ -241,11 +241,11 @@ Before making an auction decision, cross-check the latest official retention lis
 - `DataProvider` fetches the bundle once and shares the result through React context.
 - `AbortController` cancels the fetch if the provider unmounts before the request completes.
 - `BrowserRouter` is used for client-side routing. Production hosting must be configured to serve `index.html` for application routes such as `/explorer` and `/reports/...` (SPA fallback), while keeping `/data/bundle.json` accessible as a static asset.
-- The UI theme is defined in `src/index.css` and uses the project's navy, pink, and gold palette.
+- The UI theme is defined in `src/index.css` and uses the project's navy, pink and gold palette.
 - The current project has no automated test suite or lint command configured.
 
 ---
 
 ## Disclaimer
 
-This project is an analytical scouting aid built from the included research outputs. It is not affiliated with, endorsed by, or an official publication of the Rajasthan Royals or the Indian Premier League. All auction recommendations are conditional on current squad composition, official player availability, rules, and updated evidence.
+This project is an analytical scouting aid built from the included research outputs. It is not affiliated with, endorsed by, or an official publication of the Rajasthan Royals or the Indian Premier League. All auction recommendations are conditional on current squad composition, official player availability, rules and updated evidence.
